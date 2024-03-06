@@ -71,6 +71,11 @@ const AddDataForm = ({ onClose, fetchData }) => {
     }
   };
 
+  // CSS styles for the disabled state of the button
+  const saveButtonStyles = formValid
+    ? "inline-block bg-blue-500 text-white py-2 px-4 rounded-md mr-4"
+    : "inline-block bg-blue-300 text-white py-2 px-4 rounded-md mr-4 cursor-not-allowed";
+
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <h2 className="text-xl mb-4">Add New Data</h2>
@@ -153,7 +158,7 @@ const AddDataForm = ({ onClose, fetchData }) => {
         </div>
         <button
           type="submit"
-          className="inline-block bg-blue-500 text-white py-2 px-4 rounded-md mr-4"
+          className={saveButtonStyles}
           disabled={!formValid}
         >
           Save
