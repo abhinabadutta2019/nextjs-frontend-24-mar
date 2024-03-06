@@ -1,4 +1,3 @@
-// components/DataTable.js
 import React, { useState } from "react";
 
 const DataTable = ({
@@ -47,6 +46,7 @@ const DataTable = ({
       alert("Error updating data: " + error.message);
     }
   };
+
   const renderTableCell = (item, field) => {
     if (editModeMap[item._id]) {
       return (
@@ -55,6 +55,7 @@ const DataTable = ({
           value={item[field]}
           onChange={(e) => handleFieldChange(item._id, field, e.target.value)}
           readOnly={false} // Ensure the input field is editable
+          className="border border-gray-300 px-2 py-1 rounded-md"
         />
       );
     } else {
@@ -79,45 +80,77 @@ const DataTable = ({
   };
 
   return (
-    <div>
-      <table>
-        <thead>
+    <div className="overflow-x-auto">
+      <table className="min-w-full divide-y divide-gray-200">
+        <thead className="bg-gray-50">
           <tr>
-            <th></th>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Phone Number</th>
-            <th>Email</th>
-            <th>Hobbies</th>
-            <th>Action</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              ID
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Name
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Phone Number
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Email
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Hobbies
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              Action
+            </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="bg-white divide-y divide-gray-200">
           {data.map((item) => (
             <tr key={item._id}>
-              <td>
+              <td className="px-6 py-4 whitespace-nowrap">
                 <input
                   type="checkbox"
                   checked={selectedItems.includes(item._id)}
                   onChange={() => onCheckboxChange(item._id)}
+                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                 />
               </td>
-              <td>{item._id}</td>
-              <td>{renderTableCell(item, "name")}</td>
-              <td>{renderTableCell(item, "phoneNumber")}</td>
-              <td>{renderTableCell(item, "email")}</td>
-              <td>{renderTableCell(item, "hobbies")}</td>
-              <td>
+              <td className="px-6 py-4 whitespace-nowrap">{item._id}</td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                {renderTableCell(item, "name")}
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                {renderTableCell(item, "phoneNumber")}
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                {renderTableCell(item, "email")}
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                {renderTableCell(item, "hobbies")}
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
                 {editModeMap[item._id] ? (
-                  <button onClick={() => handleSaveChanges(item._id)}>
+                  <button
+                    onClick={() => handleSaveChanges(item._id)}
+                    className="text-indigo-600 hover:text-indigo-900"
+                  >
                     Save
                   </button>
                 ) : (
-                  <button onClick={() => handleToggleEditMode(item._id)}>
+                  <button
+                    onClick={() => handleToggleEditMode(item._id)}
+                    className="text-indigo-600 hover:text-indigo-900"
+                  >
                     Edit
                   </button>
                 )}
-                <button onClick={() => handleDelete(item._id)}>Delete</button>
+                <button
+                  onClick={() => handleDelete(item._id)}
+                  className="text-red-600 hover:text-red-900 ml-2"
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}

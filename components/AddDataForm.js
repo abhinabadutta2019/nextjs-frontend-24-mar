@@ -72,57 +72,98 @@ const AddDataForm = ({ onClose, fetchData }) => {
   };
 
   return (
-    <div>
-      <h2>Add New Data</h2>
+    <div className="bg-white p-6 rounded-lg shadow-md">
+      <h2 className="text-xl mb-4">Add New Data</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Name:
+          </label>
           <input
             type="text"
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
+            className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
           />
-          {formErrors.name && <span>{formErrors.name}</span>}
+          {formErrors.name && (
+            <span className="text-red-500">{formErrors.name}</span>
+          )}
         </div>
-        <div>
-          <label htmlFor="phoneNumber">Phone Number:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="phoneNumber"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Phone Number:
+          </label>
           <input
             type="number"
             id="phoneNumber"
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
+            className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
           />
-          {formErrors.phoneNumber && <span>{formErrors.phoneNumber}</span>}
+          {formErrors.phoneNumber && (
+            <span className="text-red-500">{formErrors.phoneNumber}</span>
+          )}
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Email:
+          </label>
           <input
             type="text"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
+            className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
           />
-          {formErrors.email && <span>{formErrors.email}</span>}
+          {formErrors.email && (
+            <span className="text-red-500">{formErrors.email}</span>
+          )}
         </div>
-        <div>
-          <label htmlFor="hobbies">Hobbies:</label>
+        <div className="mb-4">
+          <label
+            htmlFor="hobbies"
+            className="block text-sm font-medium text-gray-700"
+          >
+            Hobbies:
+          </label>
           <input
             type="text"
             id="hobbies"
             name="hobbies"
             value={formData.hobbies}
             onChange={handleChange}
+            className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
           />
-          {formErrors.hobbies && <span>{formErrors.hobbies}</span>}
+          {formErrors.hobbies && (
+            <span className="text-red-500">{formErrors.hobbies}</span>
+          )}
         </div>
-        <button type="submit" disabled={!formValid}>
+        <button
+          type="submit"
+          className="inline-block bg-blue-500 text-white py-2 px-4 rounded-md mr-4"
+          disabled={!formValid}
+        >
           Save
         </button>
-        <button onClick={onClose}>Cancel</button> {/* Close button */}
+        <button
+          onClick={onClose}
+          className="inline-block bg-gray-500 text-white py-2 px-4 rounded-md"
+        >
+          Cancel
+        </button>
       </form>
     </div>
   );

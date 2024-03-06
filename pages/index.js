@@ -1,4 +1,3 @@
-// pages/index.js
 import React, { useState, useEffect } from "react";
 import DataTable from "../components/DataTable";
 import AddDataForm from "../components/AddDataForm";
@@ -92,17 +91,6 @@ const Index = () => {
   const handleUpdateData = (updatedData) => {
     setData(updatedData);
   };
-  //
-  const handleFetchData = async () => {
-    try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/data`);
-      const jsonData = await response.json();
-      setData(jsonData);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-  //
 
   return (
     <div>
@@ -120,7 +108,11 @@ const Index = () => {
         <button onClick={handleSendEmail}>Send Email</button>
       )}
       {showAddForm && (
-        <AddDataForm onClose={handleCloseAddForm} fetchData={handleFetchData} />
+        <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-8 rounded-lg">
+            <AddDataForm onClose={handleCloseAddForm} fetchData={fetchData} />
+          </div>
+        </div>
       )}
     </div>
   );
