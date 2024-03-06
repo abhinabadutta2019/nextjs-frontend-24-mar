@@ -31,3 +31,20 @@ To run the Data Forge App locally, follow these steps:
 ## Contributing
 
 Contributions to the Data Forge App are welcome! If you encounter any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+
+## Screenshots
+
+List
+![image](https://github.com/abhinabadutta2019/nextjs-frontend-24-mar/assets/118996650/18edf4b0-ccb0-4a04-873a-90f3c72f0ff5)
+Edit Button/Input Field
+![image](https://github.com/abhinabadutta2019/nextjs-frontend-24-mar/assets/118996650/db675b05-916e-417d-8c3c-ed909791fdcc)
+Alert (Data Saved)
+![image](https://github.com/abhinabadutta2019/nextjs-frontend-24-mar/assets/118996650/f25cce5e-6b15-431f-8a7c-5ebc741b3af0)
+New Data Input form (With error/validation)
+![image](https://github.com/abhinabadutta2019/nextjs-frontend-24-mar/assets/118996650/3c9d88c8-5273-49d1-a3d0-82b05348326e)
+Slecting Data will apper Send mail button
+![image](https://github.com/abhinabadutta2019/nextjs-frontend-24-mar/assets/118996650/c493c28d-8cbf-4605-95e4-f08d3ba993d4)
+
+
+
+
