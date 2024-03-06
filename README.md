@@ -44,6 +44,9 @@ Contributions to the Data Forge App are welcome! If you encounter any bugs or ha
   ![image](https://github.com/abhinabadutta2019/nextjs-frontend-24-mar/assets/118996650/3c9d88c8-5273-49d1-a3d0-82b05348326e)
 - Selecting Data will appear Send mail button
   ![image](https://github.com/abhinabadutta2019/nextjs-frontend-24-mar/assets/118996650/c493c28d-8cbf-4605-95e4-f08d3ba993d4)
+-Mail Delevering in a table 
+  ![image](https://github.com/abhinabadutta2019/nextjs-frontend-24-mar/assets/118996650/7ecfa04c-ee26-449b-a465-f8fb336fa98a)
+
 
 
 
