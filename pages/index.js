@@ -10,7 +10,7 @@ const Index = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, []); // Empty dependency array means this effect runs only once after the component mounts
 
   const fetchData = async () => {
     try {
@@ -92,6 +92,17 @@ const Index = () => {
   const handleUpdateData = (updatedData) => {
     setData(updatedData);
   };
+  //
+  const handleFetchData = async () => {
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/data`);
+      const jsonData = await response.json();
+      setData(jsonData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  //
 
   return (
     <div>
@@ -108,7 +119,9 @@ const Index = () => {
       {selectedItems.length > 0 && (
         <button onClick={handleSendEmail}>Send Email</button>
       )}
-      {showAddForm && <AddDataForm onClose={handleCloseAddForm} />}
+      {showAddForm && (
+        <AddDataForm onClose={handleCloseAddForm} fetchData={handleFetchData} />
+      )}
     </div>
   );
 };

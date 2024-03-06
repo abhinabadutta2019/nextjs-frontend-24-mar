@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddDataForm = ({ onClose }) => {
+const AddDataForm = ({ onClose, fetchData }) => {
   const [formData, setFormData] = useState({
     name: "",
     phoneNumber: "",
@@ -60,6 +60,7 @@ const AddDataForm = ({ onClose }) => {
         console.log("Form submitted successfully");
         onClose(); // Close the form after submission
         alert("Data added successfully"); // Show success alert
+        fetchData(); // Fetch data again to update the UI with new data
       } else {
         console.error("Error submitting form");
         alert("Error adding data"); // Show error alert
