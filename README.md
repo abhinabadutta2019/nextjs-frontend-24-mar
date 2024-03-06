@@ -1,40 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Data Forge App
+
+## Overview
+
+Data Forge App is a web application designed to manage and manipulate data effectively. It provides users with features for adding, viewing, deleting data entries, and sending selected data via email.
+
+## Features
+
+- **Add New Data:** Users can add new data entries by providing information such as name, phone number, email, and hobbies. The data is stored securely in the backend database.
+- **View Existing Data:** The app displays existing data entries in a table format, making it easy for users to browse and manage their data.
+- **Delete Data Entries:** Users can delete individual data entries from the database, helping them keep their data organized and up-to-date.
+- **Send Data via Email:** Users can select one or more data entries and send them via email to a specified recipient. The selected data is included in the email body for easy sharing.
 
 ## Getting Started
 
-First, run the development server:
+To run the Data Forge App locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Clone this repository to your local machine.
+- Navigate to the project directory.
+- Install dependencies using npm install.
+- Start the development server using npm start.
+- Access the app in your web browser at http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Frontend:** React.js, Next.js
+- **Backend:** Node.js, Express.js, MongoDB
+- **Styling:** Tailwind CSS
+- **Email Integration:** Nodemailer
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Contributing
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions to the Data Forge App are welcome! If you encounter any bugs or have suggestions for improvements, please open an issue or submit a pull request.
