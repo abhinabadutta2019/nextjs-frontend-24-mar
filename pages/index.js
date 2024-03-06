@@ -94,7 +94,7 @@ const Index = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold mt-8 mb-4">Data Table</h1>
+      <h1 className="text-4xl font-bold mt-8 mb-4">Data Forge</h1>
       <button
         onClick={handleAddButtonClick}
         className="bg-blue-500 text-white py-2 px-4 rounded-md mr-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
