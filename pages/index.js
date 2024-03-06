@@ -69,7 +69,7 @@ const Index = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          email: "abhinabadutta3959@gmail.com",
+          email: "info@redpositive.in",
           subject: "Selected Data",
           message: "Here is the selected data:",
           selectedIds: selectedItems,
