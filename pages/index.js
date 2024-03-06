@@ -9,7 +9,7 @@ const Index = () => {
 
   useEffect(() => {
     fetchData();
-  }, []); // Empty dependency array means this effect runs only once after the component mounts
+  }, []);
 
   const fetchData = async () => {
     try {
@@ -93,9 +93,14 @@ const Index = () => {
   };
 
   return (
-    <div>
-      <h1>Data Table</h1>
-      <button onClick={handleAddButtonClick}>Add</button>{" "}
+    <div className="flex flex-col items-center">
+      <h1 className="text-4xl font-bold mt-8 mb-4">Data Table</h1>
+      <button
+        onClick={handleAddButtonClick}
+        className="bg-blue-500 text-white py-2 px-4 rounded-md mr-4 hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+      >
+        Add
+      </button>{" "}
       <DataTable
         data={data}
         onDelete={handleDelete}
@@ -105,7 +110,12 @@ const Index = () => {
         updateData={handleUpdateData}
       />
       {selectedItems.length > 0 && (
-        <button onClick={handleSendEmail}>Send Email</button>
+        <button
+          onClick={handleSendEmail}
+          className="bg-green-500 text-white py-2 px-4 rounded-md mr-4 mt-4 hover:bg-green-600 focus:outline-none focus:bg-green-600"
+        >
+          Send Email
+        </button>
       )}
       {showAddForm && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
